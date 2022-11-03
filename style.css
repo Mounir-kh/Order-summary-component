@@ -17,9 +17,10 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: hsl(225, 100%, 94%);
+    font-family: "Red Hat Display", sans-serif;
 
 }
-.desktop{
+.background-desktop{
     position: absolute;
     display: block;
     padding-top: 30%;
@@ -27,39 +28,98 @@ body{
     margin-top: 0;
 
 }
-.desktop svg{
+.background-desktop svg{
     margin-top: 0;
     width: 100%;
+    display: block;
+    
+ 
 }
-.mobile{
+.background-mobile{
     position: absolute;
     display: none;
     height: 100vh;
 }
 .container{
     position: absolute;
-    margin-top: 30%;
+    margin-top: 50%;
     text-align: center;
     width: 300px;
+    background-color:  hsl(225, 100%, 98%);
+    border-radius: 8px;
 
 }
+h1,p, .plan{
+    margin: 1rem;
+}
+
 .container img{
     display: block;
     max-width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+.container p:nth-child(3){
+    font-size: 16px;
+    color:  hsl(224, 23%, 55%);
+}
+#annual-fees{
+    color:  hsl(224, 23%, 55%);
 }
 .plan{
-    background-color: yellow;
+    background-color: hsl(0, 0%, 93%);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-right: 1rem;
     margin-left: 1rem;
-    background-color: hsl(224, 23%, 55%);
+    border-radius: 8px;
 }
+.plan img{
+    width: 50px;
+    height: 50px;
+}
+
 .plan p:nth-child(3){
     text-decoration: underline;
+    color: hsl(245, 75%, 52%);
+}
+button{
+    border-radius: 5px;
+    padding:8px;
+    border: 0;
+}
+#payment{
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    width: 80%;
+    margin-bottom: 1rem;
+
+}
+#cancel{
+    width: 80%;
+    margin-bottom: 20px;
 }
 
 
-
-.attribution { font-size: 11px; text-align: center; }
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: red;
+}
 .attribution a { color: hsl(228, 45%, 44%); }
+/*Media query*/
+@media screen and (max-width: 900px) {
+    body{
+        height: 100vh;
+    }
+    .background-desktop{
+        display: none;
+    }
+    .background-mobile{
+            position: absolute;
+            padding-top: 30%;
+            width: 100vw;
+            margin-top: 0;
+    }
+    
+}
